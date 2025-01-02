@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LottoService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LottoService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:63188/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="PlayerCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bet" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Callback" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="GuessNumber1" type="xs:int" />
+      <xs:element minOccurs="0" name="GuessNumber2" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumberOfMatches" type="xs:int" />
+      <xs:element minOccurs="0" name="Rank" type="xs:int" />
+      <xs:element minOccurs="0" name="RoundNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="Score" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="drawnNumbers" nillable="true" type="q1:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerCard" nillable="true" type="tns:PlayerCard" />
+</xs:schema>
